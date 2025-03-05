@@ -43,7 +43,7 @@ class AppFixtures extends Fixture
         }
 
         for($j = 0; $j < 100; $j++){
-            $newCategories = $faker->randomElements($categories, 3);
+            $newCategories = $faker->unique()->randomElements($categories, 3);
             $article = new Article();
             $article->setTitle($faker->sentence())
                     ->setContent($faker->text())
