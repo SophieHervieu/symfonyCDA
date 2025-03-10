@@ -36,7 +36,8 @@ class Category
         return $this;
     }
 
-    public function toString(){
-        return $this->id;
+    public function __toString()
+    {
+        return $this->name;
     }
 }
