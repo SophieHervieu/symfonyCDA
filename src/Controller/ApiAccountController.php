@@ -32,7 +32,7 @@ final class ApiAccountController extends AbstractController
         );
     }
 
-    #[Route('/api/account', name: 'app_account_add', methods: ['POST'])]
+    #[Route('/api/account', name: 'api_account_add', methods: ['POST'])]
     public function addAccount(Request $request, UserPasswordHasherInterface $hasher): Response
     {
         //Récupération le body de la requête

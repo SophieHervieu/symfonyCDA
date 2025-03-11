@@ -23,10 +23,10 @@ class ArticleCrudController extends AbstractCrudController
         return [
             IdField::new('id', 'Clé primaire')->hideOnForm(),
             TextField::new('title', 'Titre'),
-            TextAreaField::new('content', 'Contenu'),
-            DateTimeField::new('createAt', 'Date'),
-            AssociationField::new('author', 'Auteur')->hideOnIndex(),
-            AssociationField::new('categories', 'Catégorie')->hideOnIndex(),
+            TextAreaField::new('content', 'Contenu')->setMaxLength(30)->setNumOfRows(30),
+            DateTimeField::new('createAt', 'Date')->setFormat('dd-mm-YYYY'),
+            AssociationField::new('author', 'Auteur')->autocomplete()->hideOnIndex(),
+            AssociationField::new('categories', 'Catégorie')->autocomplete()->hideOnIndex(),
         ];
     }
 }
