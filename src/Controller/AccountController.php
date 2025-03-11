@@ -42,7 +42,7 @@ final class AccountController extends AbstractController
         ]);
     }
 
-    #[Route('/account/{id}', name: 'app_account')]
+    #[Route('/account/{id}', name: 'app_account_id')]
     public function showById(int $id): Response
     {
         $msg = "";
